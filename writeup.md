@@ -33,11 +33,11 @@ This pipeline worked well enough, and it was possible to identify the lines in a
 
 ### Potential shortcomings of the current pipeline
 
-The approach/pipeline described above works well with the test data provided. One potential shortcoming would be in case the camera angle is different and with that the region of interest ROI would be different. In addition, if the lane markings were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detect the lanes by using the canny transform. Moreover, in case there were animals, people or other dynamic object e.g. cars in between the two lanes, we would have to filter that out from the image before in canny edge detection is run.
+The approach/pipeline described above works well with the test data provided. One potential shortcoming would be in case the camera angle is different with that of the region of interest ROI, since currently the ROI is hardcoded. In addition, if the lane markings in the figures/videos were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detect the lanes by using the canny transform. 
 
 ### Possible improvements of the current pipeline
 
-A possible improvement would be to tweak the parameters for even better performance. 
+A possible improvement would be to tweak the parameters for even better performance. Further, currently only straight lines were in the current scope of detection. Fitting curved line to canny edge lines would perform in curves. A lot of disturbing lines are produced in case there are people or other object e.g. cars in between the two lanes/in front of the car. To overcome this we would have to filter that out from the image before in canny edge detection is run.
 
 ### References
 
