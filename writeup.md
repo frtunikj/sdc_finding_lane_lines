@@ -10,15 +10,15 @@
 [image6]: ./test_images_merged/solidWhiteCurve.jpg
 
 
-In order to detect road lines in images and videos (sequence of images) one hast to prefrorm the following seven steps:
+In order to detect road lines in images and videos (sequence of images) one has to perform the following seven steps:
 
 1. Read the images on which you want to detect road lines
 ![alt text][image0]
 2. Convert RGB image to a grayscale image
 ![alt text][image1] 
-3. Apply Gaussian smoothing to gray immages
+3. Apply Gaussian smoothing to gray images
 ![alt text][image2] 
-4. Perform Canny edge detection to smoothed gray immages
+4. Perform Canny edge detection to smoothed gray images
 ![alt text][image3] 
 5. Crop images to region of interest ROI and mask away the undesired portions of the image
 ![alt text][image4] 
@@ -27,9 +27,9 @@ In order to detect road lines in images and videos (sequence of images) one hast
 7. Merge original image with hough lanes
 ![alt text][image6] 
 
-For performing the processing you need the OpenCV computer vision and image processing library. The calenge here is to figure out the parameters of each function in order to produce the desired output. The Gaussian smoothing function takes a kernel size as an input. The bigger the kernel the blurrier is the image. The Canny edge function takes a high and low thresholds, which determine a minimum difference in intensity to establish an edge and to form a contiguous extension of an established edge, respectively. The Hough transform function takes as paramters: the resolution for line position and orientation, a minimum number of points to establish a line, the minimum length of a line, and the maximum gap between points allowed for a line. NOTE: Please look at the test_images folders as I have saved the images after each step of my pipeline for each test image.
+For performing the processing you need the OpenCV computer vision and image processing library. The challenge here is to figure out the parameters of each function in order to produce the desired output. The Gaussian smoothing function takes a kernel size as an input. The bigger the kernel the blurrier is the image. The Canny edge function takes a high and low thresholds, which determine a minimum difference in intensity to establish an edge and to form a contiguous extension of an established edge, respectively. The Hough transform function takes as paramters: the resolution for line position and orientation, a minimum number of points to establish a line, the minimum length of a line, and the maximum gap between points allowed for a line. NOTE: Please look at the test_images folders as I have saved the images after each step of my pipeline for each test image.
 
-This pipeline worked well enough, and it was possible to identify the lines in all test images. In order to identify lines in a video the above steps were included in a function for processing image and then that function was run to the sequence of the images that one has in a video. You can find the generated videos in [https://github.com/frtunikj/sdc_finding_lane_lines/test_videos_output](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/test_videos_output). 
+This pipeline worked well enough, and it was possible to identify the lines in all test images. In order to identify lines in a video the above steps were included in a function for processing image. Then the same function was run to the sequence of the images generated in a video. You can find the generated videos in [https://github.com/frtunikj/sdc_finding_lane_lines/test_videos_output](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/test_videos_output). 
 
 ### Potential shortcomings of the current pipeline
 
@@ -41,7 +41,7 @@ A possible improvement would be to tweak the parameters for even better performa
 
 ### References
 
-Further usefull readings:
+Further useful readings:
 
 * https://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html 
 * https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#gaussianblur 

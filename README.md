@@ -15,9 +15,9 @@ In this project you will detect lane lines in images using Python and OpenCV. Op
 
 About the project
 ---
-A brief explanation of the processing pipeline for detecting road lines, as well as suggestions for further improvements can be find [here](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/writeup.md). 
+A brief explanation of the processing pipeline for detecting road lines, as well as suggestions for further improvements can be found [here](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/writeup.md). 
 
-The file containing project code is [code](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/sdc_finding_lane_lines.ipynb).
+The Jupyter file containing the project code is [sdc_finding_lane_lines](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/sdc_finding_lane_lines.ipynb).
 
 Project environment installation
 ---
