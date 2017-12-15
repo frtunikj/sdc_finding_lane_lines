@@ -1,5 +1,4 @@
 # **Finding Lane Lines on the Road** 
----
 [//]: # (Image References)
 
 [image0]: ./test_images/solidWhiteCurve.jpg
@@ -11,34 +10,34 @@
 [image6]: ./test_images_merged/solidWhiteCurve.jpg
 
 
-In order to detect road lines in images and videos (sequence of images) one hast to prefrorm the following 5 steps:
+In order to detect road lines in images and videos (sequence of images) one hast to prefrorm the following seven steps:
 
-0. Read the images on which you want to detect road lines
+1. Read the images on which you want to detect road lines
 ![alt text][image0]
-1. Convert RGB image to a grayscale image
+2. Convert RGB image to a grayscale image
 ![alt text][image1] 
-2. Apply Gaussian smoothing to gray immages
+3. Apply Gaussian smoothing to gray immages
 ![alt text][image2] 
-3. Perform Canny edge detection to smoothed gray immages
+4. Perform Canny edge detection to smoothed gray immages
 ![alt text][image3] 
-4. Crop images to region of interest ROI and mask away the undesired portions of the image
+5. Crop images to region of interest ROI and mask away the undesired portions of the image
 ![alt text][image4] 
-5. Apply Hough transformation to images
+6. Apply Hough transformation to images
 ![alt text][image5] 
-6. Merge original image with hough lanes
+7. Merge original image with hough lanes
 ![alt text][image6] 
 
 For performing the processing you need the OpenCV computer vision and image processing library. The calenge here is to figure out the parameters of each function in order to produce the desired output. The Gaussian smoothing function takes a kernel size as an input. The bigger the kernel the blurrier is the image. The Canny edge function takes a high and low thresholds, which determine a minimum difference in intensity to establish an edge and to form a contiguous extension of an established edge, respectively. The Hough transform function takes as paramters: the resolution for line position and orientation, a minimum number of points to establish a line, the minimum length of a line, and the maximum gap between points allowed for a line. 
 
-This pipeline worked well enough, and it was possible to identify the lines in all test images. In order to identify lines in a video the above steps were included in a function for processing image and then that function was run to the sequence of the images that one has in a video. Please find the genarated videos in [https://github.com/frtunikj/sdc_finding_lane_lines/test_videos_output](https://github.com/frtunikj/sdc_finding_lane_lines/test_videos_output). 
+This pipeline worked well enough, and it was possible to identify the lines in all test images. In order to identify lines in a video the above steps were included in a function for processing image and then that function was run to the sequence of the images that one has in a video. Please find the genarated videos in [https://github.com/frtunikj/sdc_finding_lane_lines/test_videos_output](https://github.com/frtunikj/sdc_finding_lane_lines/blob/master/test_videos_output). 
 
-### Potential shortcomings the current pipeline
+### Potential shortcomings of the current pipeline
 
-The approach/pipeline described above works well with the test data provided. One potential shortcoming would be what would happen when if the camera angle was different and with that the region of interest ROI would be different. In addition, if the lane markings were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detectthe lanes by using the canny transform. Moreover, in case there were animals, people or other dynamic object e.g. cars in between the two lanes, we would have to filter that out from the image before in canny edge detection is run.
+The approach/pipeline described above works well with the test data provided. One potential shortcoming would be in case the camera angle is different and with that the region of interest ROI would be different. In addition, if the lane markings were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detectthe lanes by using the canny transform. Moreover, in case there were animals, people or other dynamic object e.g. cars in between the two lanes, we would have to filter that out from the image before in canny edge detection is run.
 
 Last but not least, parameters can be tweaked for even better performance. 
 
-### Possible improvements of the pipeline
+### Possible improvements of the current pipeline
 
 A possible improvement would be to ...
 
