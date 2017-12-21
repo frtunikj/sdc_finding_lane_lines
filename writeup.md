@@ -35,7 +35,7 @@ This pipeline worked well enough, and it was possible to identify the lines in a
 
 ### Potential shortcomings of the current pipeline
 
-The approach/pipeline described above works well with the test data provided. One potential shortcoming would be in case the camera angle is different with that of the region of interest ROI, since currently the ROI is hardcoded. In addition, if the lane markings in the figures/videos were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detect the lanes by using the canny transform. 
+The approach/pipeline described above works well with the test data provided. One potential shortcoming would be in case the camera angle is different with that of the region of interest ROI, since currently the ROI is hardcoded. In addition, if the lane markings in the figures/videos were with a bad quality i.e. the difference between the color of the lanes were too minimal, the approach would not be able to detect the lanes by using the canny transform. Furthermore, if the weather conditions in the videos were bad e.g. thick fog or heavy rain, the camera will have problems with the performance i.e. detection, so we might not be able to detect lines at all.
 
 ### Possible improvements of the current pipeline
 
